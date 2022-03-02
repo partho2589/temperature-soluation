@@ -16,6 +16,9 @@ const displayTemperater = temperator =>{
     setInnerText('city-location', temperator.name)
     setInnerText('temperature', temperator.main.temp)
     setInnerText('condition', temperator.weather[0].main)
-    console.log(temperator)
+    const url =` http://openweathermap.org/img/wn/${temperator.weather[0].icon}@2x.png`
+    const imgIcon = document.getElementById('weader-icon');
+    imgIcon.setAttribute('src',url)
+   
     
 }
